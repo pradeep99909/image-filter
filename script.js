@@ -158,35 +158,3 @@ document.getElementById('src').addEventListener('change',ml);
 
 
 function img_src(){ img.src=document.getElementById('src').value; }
-
-
-function ml(){
-  // The image we want to classify
-      const image = document.getElementById('img_url');
-      // The result tag in the HTML
-      const result = document.getElementById('result');
-      // The probability tag in the HTML
-      const probability = document.getElementById('probability');
-
-      // Initialize the Image Classifier method with MobileNet
-      const classifier = ml5.imageClassifier('MobileNet', function() {
-        console.log('Model Loaded!');
-      });
-
-      // Make a prediction with the selected image
-      // This will return an array with a default of 10 options with their probabilities
-      classifier.predict(image, function(err, results) {
-        result.innerText = "The MobileNet model labeled this as "+results[0].className+" with confidence of "+results[0].probability.toFixed(4);
-      });
-  
- 
-}
-
-
-
-function paste(e){
-  let paste = (e.clipboardData || window.clipboardData).getData('text');
-  
-  document.getElementById('src').value=paste;
-  
-}
