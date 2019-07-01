@@ -1,0 +1,132 @@
+#all {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EF5350;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+}
+
+#add_filter {
+  bottom: 50px;
+  right: 50px;
+  background-color: #66BB6A;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#src {
+  width: 300px;
+  height: 30px;
+  background: none;
+  border: 2px solid white;
+  margin-bottom: 20px;
+  color: white;
+  outline: none;
+}
+
+#src::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+#add_filter i {
+  color: white;
+  font-size: 23px;
+}
+
+#filter_input {
+  width: 300px;
+  height: 500px;
+  bottom: 100px;
+  right: 100px;
+  position: fixed;
+  background-color: white;
+  display: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #A5D6A7;
+  border-radius: 4px;
+}
+
+#part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+  height: 60px;
+  width: 300px;
+  font-size: 14px;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  color: #EF5350;
+  font-family: sans-serif;
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  #img_url {
+    width: 400px;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #img_url {
+    width: 300px;
+    height: 400px;
+  }
+
+  #filter_input {
+    width: 200px;
+    bottom: 30px;
+    right: 50px;
+  }
+
+  input[type="range"] {
+    width: 200px;
+  }
+
+  #add_filter {
+    bottom: 10px;
+    right: 10px;
+  }
+}

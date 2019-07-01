@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Image Filter</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  <head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#EF5350" />
+</head>
+<div id='all'>
+  <div id='filter'>
+    <h3 style="color:white;font-family:sans-serif;">Image Filter</h3>
+    <div>
+      <input type='text' id='src' placeholder="Paste Image Source here">
+      <button style="background-color:#388E3C;color:white;height:35px;width:100px;border-radius:10px;border:none;cursor:pointer" onclick='paste'>Paste</button>
+    </div>
+    <img src='https://images.unsplash.com/photo-1413977886085-3bbbf9a7cf6e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' id='img_url' crossorigin="anonymous" >
+    <div id='result'>ANSWER</div>
+    
+  </div>
+  <div id='add_filter' onclick='o()'>
+    <i class="material-icons">
+photo_filter
+</i>
+  </div>
+  
+  <div id='filter_input'>
+    <div id='part'>
+      <div id='p'>Hue Rotate</div>
+    <input type='range' step=1 max=360 min=-360 id='hue' />
+      <div id='hue_value'></div>
+    </div>
+    
+    <div id='part'>
+      <div id='p'>Saturate</div>
+    <input type='range' step=1 max=100 min=0 id='saturate' value='100' />
+      <div id='saturate_value'></div>
+    </div>
+    
+    
+    <div id='part'>
+      <div id='p'>Brightness</div>
+    <input type='range' step=1 max=100 min=0 id='brightness' value='100' />
+      <div id='brightness_value'></div>
+    </div>
+    
+    <div id='part'>
+      <div id='p'>Constrast</div>
+    <input type='range' step=1 max=100 min=0 id='contrast' value='100' />
+      <div id='contrast_value'></div>
+    </div>
+    
+    
+    <div id='part'>
+      <div id='p'>Blur</div>
+    <input type='range' step=1 max=30 min=0 id='blur' value='0' />
+      <div id='blur_value'></div>
+    </div>
+    
+    
+    <div id='part'>
+      <div id='p'>Grayscale</div>
+    <input type='range' step=1 max=100 min=0 id='grayscale' value='0' />
+      <div id='grayscale_value'></div>
+    </div>
+    
+    
+    <div id='part'>
+      <div id='p'>Sepia</div>
+    <input type='range' step=1 max=100 min=0 id='sepia' value='0' />
+      <div id='sepia_value'></div>
+    </div>
+    
+    
+    <div id='part'>
+      <div id='p'>Invert</div>
+    <input type='range' step=1 max=100 min=0 id='invert' value='0' />
+      <div id='invert_value'></div>
+    </div>
+    
+    
+  </div>
+</div>
+  <script src='https://unpkg.com/ml5@0.1.3/dist/ml5.min.js'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
